@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import showgo.modell.stamm.Person;
 
-public class ShowGO {
-
-	public ShowGO() {
-		super();
+public enum ShowGO {
+	INSTANCE;
+	
+	private ShowGO() {
 		PersonenListe = new ArrayList<Person>();
 	}
 
@@ -23,7 +23,7 @@ public class ShowGO {
 
 	@Override
 	public String toString() {
-		return "ShowGO [PersonenListe=" + PersonenListe + "]";
+		return "ShowGO [PersonenListe=" + PersonenListe.toString() + "]";
 	}
 
 }
