@@ -4,15 +4,25 @@ import java.util.ArrayList;
 import java.util.List;
 import showgo.modell.stamm.Person;
 
+/**
+ * @author knobloch
+ *
+ */
 public enum ShowGO {
 	INSTANCE;
 	
 	private ShowGO() {
+		// TODO: Weitere Attribute hinzufügen
 		PersonenListe = new ArrayList<Person>();
+		// TODO: EnsembleListe = new ArrayList<EnsembleMitglied>;
+		// TODO: StueckeListe = new ArrayList<Stueck>;
 	}
 
 	private List<Person> PersonenListe;
 
+	/**
+	 * @param neuePerson Objekt einer neuen Person
+	 */
 	public void anlegenPerson(Person neuePerson) {
 		PersonenListe.add(neuePerson);
 	}
